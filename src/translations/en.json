@@ -1,0 +1,15 @@
+{
+  "insuree_batch.InsureesBatchPage.addNewBatch": "Create a new Batch",
+  "insuree_batch.menu.batches": "Batch Runs",
+  "insuree_batch.BatchSearcher.tableTitle": "{count} Batches",
+  "insuree_batch.batch.runDate": "Run Date",
+  "insuree_batch.batch.amount": "Amount",
+  "insuree_batch.batch.comment": "Comment",
+  "insuree_batch.batch.totalCount": "Total Count",
+  "insuree_batch.BatchFilters.fromRunDate": "From Run Date",
+  "insuree_batch.BatchFilters.toRunDate": "To Date From",
+  "insuree_batch.CreateBatchDialog.title": "Create a new batch",
+  "insuree_batch.CreateBatchDialog.submit": "Submit",
+  "insuree_batch.CreateBatchDialog.cancel": "Cancel",
+  "insuree_batch.CreateBatchDialog.explanation": "Create valid insuree identifiers and lock them in database until you assigned them to a insuree using the QR code."
+}

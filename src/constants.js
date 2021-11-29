@@ -1,0 +1,2 @@
+export const RIGHT_QUERY_BATCHES = 111102;
+export const RIGHT_CREATE_BATCHES = 111101;
