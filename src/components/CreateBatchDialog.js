@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import { Box, Button, Dialog, DialogTitle, DialogContentText, DialogActions, DialogContent } from "@material-ui/core";
 import {
   useTranslations,
@@ -25,15 +25,16 @@ const CreateBatchDialog = (props) => {
       comment: values.comment,
     });
     setValues({});
+    onClose();
   };
   return (
     <Dialog open={open} onClose={onClose} fullWidth maxWidth="md">
       <DialogTitle>{formatMessage("CreateBatchDialog.title")}</DialogTitle>
       <DialogContent>
-        <DialogContentText>{formatMessage("CreateBatchDialog.explanation")}</DialogContentText>
         <ProgressOrError error={error} progress={isLoading} />
         {!isLoading && (
           <>
+            <DialogContentText>{formatMessage("CreateBatchDialog.explanation")}</DialogContentText>
             <Box my={2}>
               <NumberInput
                 module="insuree_batch"

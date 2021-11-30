@@ -1,9 +1,8 @@
 import { useMemo } from "react";
-import { useGraphqlMutation, useGraphqlQuery, useModulesManager } from "@openimis/fe-core";
+import { useGraphqlMutation, useGraphqlQuery } from "@openimis/fe-core";
 import _ from "lodash";
 
 export const useBatchesQuery = ({ filters }, config) => {
-  const modulesManager = useModulesManager();
   const { isLoading, error, data, refetch } = useGraphqlQuery(
     `
     query useBatchesQuery ($first: Int, $last: Int, $before: String, $after: String, $fromRunDate: DateTime, $toRunDate: DateTime, $location: String) {
@@ -14,9 +13,12 @@ export const useBatchesQuery = ({ filters }, config) => {
             runDate
             archived
             comment
-            insureeNumbers {
-              totalCount
+            printUrl
+            location {
+              id code name uuid parent {id uuid code name}
             }
+            nbGenerated
+            nbPrinted
           }
         }
         totalCount
