@@ -1,9 +1,9 @@
 {
   "name": "@openimis/fe-insuree_batch",
-  "version": "1.2.0-rc3",
+  "version": "1.3.0",
   "license": "AGPL-3.0-only",
-  "description": "openIMIS Frontend Insuree Batch reference module",
-  "repository": "openimis/fe-insuree_batch",
+  "description": "openIMIS Frontend Insuree Batch module",
+  "repository": "openimis/openimis-fe-insuree_batch_js",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "engines": {
