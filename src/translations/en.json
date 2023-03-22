@@ -4,6 +4,7 @@
   "insuree_batch.BatchSearcher.tableTitle": "{count} Batches",
   "insuree_batch.batch.location": "Location",
   "insuree_batch.batch.runDate": "Run Date",
+  "insuree_batch.batch.amount": "Batch Amount",
   "insuree_batch.batch.comment": "Comment",
   "insuree_batch.batch.nbGenerated": "# Generated",
   "insuree_batch.batch.nbPrinted": "# Printed",
