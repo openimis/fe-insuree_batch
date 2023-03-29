@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 const BatchFilters = (props) => {
   const { filters, onChangeFilters } = props;
+  console.log("filters: ", filters)
   const modulesManager = useModulesManager();
   const classes = useStyles();
   const { formatMessage } = useTranslations("insuree_batch", modulesManager);
@@ -64,6 +65,7 @@ const BatchFilters = (props) => {
                     value={filters?.toRunDate?.value}
                     module="insuree_batch"
                     label="insuree_batch.BatchFilters.toRunDate"
+                    minDate={filters?.fromRunDate?.value}
                     onChange={(value) =>
                       onChangeFilters([
                         {
