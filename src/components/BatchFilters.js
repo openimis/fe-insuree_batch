@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
 
 const BatchFilters = (props) => {
   const { filters, onChangeFilters } = props;
-  console.log("filters: ", filters)
   const modulesManager = useModulesManager();
   const classes = useStyles();
   const { formatMessage } = useTranslations("insuree_batch", modulesManager);
