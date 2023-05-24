@@ -64,6 +64,7 @@ const BatchFilters = (props) => {
                     value={filters?.toRunDate?.value}
                     module="insuree_batch"
                     label="insuree_batch.BatchFilters.toRunDate"
+                    minDate={filters?.fromRunDate?.value}
                     onChange={(value) =>
                       onChangeFilters([
                         {

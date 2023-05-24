@@ -5,8 +5,8 @@ import _ from "lodash";
 export const useBatchesQuery = ({ filters }, config) => {
   const { isLoading, error, data, refetch } = useGraphqlQuery(
     `
-    query useBatchesQuery ($first: Int, $last: Int, $before: String, $after: String, $fromRunDate: DateTime, $toRunDate: DateTime, $location: String) {
-      batches: insureeBatches(first: $first, last: $last, before: $before, after: $after, runDate_Lte: $toRunDate, runDate_Gte: $fromRunDate, location_Uuid: $location) {
+    query useBatchesQuery ($first: Int, $last: Int, $before: String, $after: String, $fromRunDate: DateTime, $toRunDate: DateTime, $location: Int) {
+      batches: insureeBatches(first: $first, last: $last, before: $before, after: $after, runDate_Lte: $toRunDate, runDate_Gte: $fromRunDate, location: $location) {
         edges {
           node {
             id
@@ -14,9 +14,7 @@ export const useBatchesQuery = ({ filters }, config) => {
             archived
             comment
             printUrl
-            location {
-              id code name uuid parent {id uuid code name}
-            }
+            location {id uuid code name parent {id uuid name code}}
             nbGenerated
             nbPrinted
           }
